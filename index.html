@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Practicas Fredy Chingon Diaz</title>
 <script>
-        function Mostrar(titulo, mirar) {
-            document.getElementById('frame3').innerHTML = titulo;
-            document.getElementById('frame1').src = "" + mirar + ".html";
+             function Mostrar(titulo, mirar) {
+        parent.frames["frame3"].document.getElementById('tituloframe3').innerHTML = titulo;
+        parent.frames["frame1"].src = "" + mirar + ".html";
         }
     </script>
 </head>

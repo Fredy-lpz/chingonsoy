@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Practicas Fredy Chingon Diaz</title>
 <script>
-        function mostrarPagina(nombrePagina, mirarPagina) {
-            document.getElementById('frame3').innerHTML = nombrePagina;
-            document.getElementById('frame1').src = "" + mirarPagina + ".html";
+        function mostrarPagina(titulo, mirar) {
+            document.getElementById('frame3').innerHTML = titulo;
+            document.getElementById('frame1').src = "" + mirar + ".html";
         }
     </script>
 </head>
@@ -15,7 +15,7 @@
 <frameset cols="25%,75%" border=2>
     <frame src="frames2.html" noresize>
 <frameset rows="15%,85%">
-    <frame src="about:blank" name="frames3" noresize id="frame3" p align="center">AGA
+    <frame src="about:blank" name="frames3" noresize id="frame3" <p align="center">AGA>
     <frame src="about:blank" name="frames1" noresize id="frame1">
 </frameset>
 </frameset>

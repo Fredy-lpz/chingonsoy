@@ -6,7 +6,7 @@
     <title>Frames Interconectados</title>
 <script>
         function mostrarPagina(nombrePagina, mirarPagina) {
-            document.getElementById('frame3').innerHTML = nombrePagina;
+            document.getElementById('frame3').innerHTML = "nombrePagina;
             document.getElementById('frame1').src = "" + mirarPagina + ".html";
         }
     </script>
@@ -14,8 +14,8 @@
 <frameset cols="25%,75%" border=2>
     <frame src="frames2.html" noresize>
 <frameset rows="15%,85%">
-    <frame src="about:blank" name="frames3" noresize id="frame3">
-    <frame src="about:blank" name="frames1" noresize id="frame1">
+    <frame src="about:blank" noresize id="frame3">
+    <frame src="about:blank" noresize id="frame1">
 </frameset>
 </frameset>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<h1>Encuesta </h1>
+    <form action="/procesar-encuesta" method="POST">
+        <h2>¿Cual Es Tu Color Favorito?</h2>
+        <label><input type="checkbox" name="color" value="Rojo"> Rojo</label><br>
+        <label><input type="checkbox" name="color" value="Azul"> Azul</label><br>
+        <label><input type="checkbox" name="color" value="Verde"> Verde</label><br>       
+        <h2>¿Cual Es Tu Animal Favorito?</h2>
+        <select id="animal" name="animal" required>
+            <option value="">Seleccione</option>
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>Preguntas</h1>
+<form id="bot">
+    <ol>
+        <li>
+            <h3>¿Cual Es El Elemento HTML Utilizado Para Definir Un Parrafo?</h3>
+            <input type="radio" name="q1" value="a"> a) &lt;paragraph&gt;<br>
+            <input type="radio" name="q1" value="b"> b) &lt;p&gt;<br>
+            <input type="radio" name="q1" value="c"> c) &lt;para&gt;<br>
+            <input type="radio" name="q1" value="d"> d) &lt;par&gt;
+        </li>
+        <li>
+            <h3>¿Cuál Es El Atributo Utilizado Para Agregar Un Hipervinculo En HTML?</h3>
+            <input type="radio" name="q2" value="a"> a) href<br>
+            <input type="radio" name="q2" value="b"> b) link<br>
+            <input type="radio" name="q2" value="c"> c) src<br>
+            <input type="radio" name="q2" value="d"> d) url
+        </li>
+        <li>
+            <h3>¿Cual Es El Elemento HTML Utilizado Para Definir La Lista Desordenada?</h3>
+            <input type="radio" name="q3" value="a"> a) &lt;list&gt;<br>
+            <input type="radio" name="q3" value="b"> b) &lt;ul&gt;<br>
+            <input type="radio" name="q3" value="c"> c) &lt;ol&gt;<br>
+            <input type="radio" name="q3" value="d"> d) &lt;li&gt;
+        </li>
+        <li>
+            <h3>¿Cual Es El Elemento HTML Utilizado Para Definir La Lista Ordenada?</h3>
+            <input type="radio" name="q4" value="a"> a) &lt;list&gt;<br>
+            <input type="radio" name="q4" value="b"> b) &lt;ul&gt;<br>
+            <input type="radio" name="q4" value="c"> c) &lt;ol&gt;<br>
+            <input type="radio" name="q4" value="d"> d) &lt;li&gt;
+        </li>
+        <li>
+            <h3>¿Cual Es El Atributo Utilizado Para Especificar Una Imagen En HTML?</h3>
+            <input type="radio" name="q5" value="a"> a) src<br>
+            <input type="radio" name="q5" value="b"> b) img<br>
+            <input type="radio" name="q5" value="c"> c) href<br>
+            <input type="radio" name="q5" value="d"> d) url
+        </li>
+    </ol>
+    <input type="button" value="Calcular Puntos" id="calcularBtn">
+</form>
+
+<div id="resultado"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var calcularBtn = document.getElementById("calcularBtn");
+    calcularBtn.addEventListener("click", function() {
+        var puntos = 0;
+        var respuestas = ["b", "a", "b", "c", "a"];
+        var form = document.getElementById("bot");
+        var inputs = form.querySelectorAll('input[type="radio"]:checked');
+
+        if(inputs.length < 5) {
+            alert("Por favor, responde todas las preguntas.");
+            return;
+        }
+
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].value === respuestas[i]) {
+                puntos++;
+            }
+        }
+
+        var resultado = document.getElementById("resultado");
+        resultado.innerHTML = "Tu Puntuacion Es De " + puntos + ".";
+    });
+});
+</script>
+</body>
+</html>

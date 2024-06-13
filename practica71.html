@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<h1>Comprar Un Producto</h1>
+    <form action="/procesar-compra" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+ <label for="gender">Producto:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Seleccione</option>
+            <option value="masculino">Audifonos</option>
+            <option value="femenino">Celulares</option>
+            <option value="otro">Laptops</option>
+        </select>
+        <br><br>
+        
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+        <br><br>
+        
+        <input type="submit" value="Comprar">
+        <input type="reset" value="Cancelar">
+    </form>
+</body>
+</html>
